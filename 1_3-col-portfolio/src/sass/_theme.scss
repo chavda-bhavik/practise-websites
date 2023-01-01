@@ -1,0 +1,39 @@
+$bvc-color-primary: #2a6496 !default;
+$bvc-color-white: #ffffff !default;
+$bvc-color-dark: #222222 !default;
+$bvc-color-font: #333333 !default;
+$bvc-color-gray: #767676 !default;
+$bvc-color-light-gray: #eeeeee !default;
+$bvc-color-body: #f5f5f5 !default;
+
+$bvc-link-color: $bvc-color-primary !default;
+$bvc-border-radius: 4px !default;
+
+$bvc-font-family: "Baloo 2", sans-serif;
+$bvc-strong-font-weight: 600 !default;
+$bvc-h1-font-size: 4.2rem !default;
+$bvc-h2-font-size: 3.15rem !default;
+$bvc-h3-font-size: 2rem !default;
+$bvc-h4-font-size: 1.35rem !default;
+$bvc-text-font-size: 1.15rem !default;
+$bvc-lead-font-size: 1.35rem !default;
+
+$bvc-spacing: (
+  sm: 1rem,
+  md: 3rem,
+  lg: 6rem,
+  xl: 10rem,
+  auto: "auto",
+) !default;
+
+$bvc-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+) !default;
+
+@function bvc-breakpoint($key) {
+  @return map-get($bvc-breakpoints, $key);
+}

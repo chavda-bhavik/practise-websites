@@ -1,0 +1,281 @@
+/*
+ * [Modified] Modern CSS Reset
+ * @link https://github.com/hankchizljaw/modern-css-reset
+*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol, ul {
+  margin: 0;
+  padding: 0;
+}
+
+p,
+li,
+h1,
+h2,
+h3,
+h4 {
+  word-break: break-word;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+}
+
+/* Make images easier to work with */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  html {
+    scroll-behavior: initial;
+  }
+}
+body {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  color: #333333;
+  font-family: "Baloo 2", sans-serif;
+}
+
+main, main.bvc-container {
+  padding-top: 5vh;
+}
+
+footer {
+  margin-top: auto;
+}
+
+article {
+  max-width: 80ch;
+}
+article > img {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.bvc-container {
+  max-width: 120ch;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #eeeeee;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.bvc-navbar {
+  overflow: auto;
+  border-width: 0 0 1px;
+  background-color: #222222;
+  border-color: #767676;
+}
+
+.bvc-navbar-toggle {
+  position: relative;
+  float: right;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #767676;
+  padding: 0.6rem 0.5rem;
+  border-radius: 4px;
+  margin: 0.5rem;
+}
+.bvc-navbar-toggle .icon-bar {
+  display: block;
+  background-color: #ffffff;
+  height: 2px;
+  width: 22px;
+}
+.bvc-navbar-toggle:hover {
+  background-color: #767676;
+}
+.bvc-navbar-toggle .icon-bar + .icon-bar {
+  margin-top: 4px;
+}
+@media screen and (min-width: 768px) {
+  .bvc-navbar-toggle {
+    display: none;
+  }
+}
+
+.bvc-navbar-header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.bvc-navbar-header .bvc-navbar-brand {
+  float: left;
+  padding: 0.7rem 0.5rem;
+  font-size: 1.5rem;
+  line-height: 30px;
+  color: #ffffff;
+  text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+  .bvc-navbar-header {
+    float: left;
+  }
+}
+
+.bvc-navbar-collapse.collapse {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .bvc-navbar-collapse.collapse {
+    display: block;
+  }
+}
+
+.bvc-nav-list {
+  list-style: none;
+}
+.bvc-nav-list .bvc-nav-item {
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .bvc-nav-list .bvc-nav-item {
+    float: left;
+  }
+}
+.bvc-nav-list .bvc-nav-item a {
+  display: block;
+  line-height: 30px;
+  padding: 0.7rem 0.5rem;
+  text-decoration: none;
+  color: #ffffff;
+}
+@media screen and (max-width: 576px) {
+  .bvc-nav-list .bvc-nav-item a {
+    line-height: 15px;
+  }
+}
+
+.bvc-title {
+  font-size: 4.2rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.bvc-subtitle {
+  font-size: 3.15rem;
+  font-weight: 600;
+  margin-top: 0;
+}
+
+.bvc-projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1rem;
+}
+
+.bvc-project .bvc-project-title {
+  font-weight: 600;
+  color: #2a6496;
+}
+.bvc-project .bvc-project-image {
+  width: 100%;
+  object-fit: cover;
+}
+.bvc-project .bvc-project-link {
+  color: #2a6496;
+}
+.bvc-project .bvc-project-link:hover {
+  color: #222222;
+}
+
+.bvc-pagination-container {
+  text-align: center;
+}
+
+.bvc-pagination {
+  display: inline-block;
+  border: 1px solid #767676;
+  border-radius: 4px;
+}
+.bvc-pagination a {
+  color: #767676;
+  float: left;
+  padding: 0.2rem 0.7rem;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  font-size: 22px;
+}
+.bvc-pagination a:hover {
+  background-color: #767676;
+  color: #ffffff;
+}
+.bvc-pagination a.active {
+  background-color: #2a6496;
+  color: #ffffff;
+}
+.bvc-pagination a + a {
+  border-left: 1px solid #767676;
+}
+
+/*# sourceMappingURL=style.css.map */

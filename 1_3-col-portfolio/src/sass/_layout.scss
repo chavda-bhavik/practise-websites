@@ -1,0 +1,39 @@
+// stylelint-disable-next-line selector-max-type
+body {
+  min-height: 100vh;
+  background-color: $bvc-color-body;
+  color: $bvc-color-font;
+  font-family: $bvc-font-family;
+}
+
+// stylelint-disable selector-max-type, selector-no-qualifying-type
+main, main.bvc-container {
+  padding-top: 5vh;
+}
+
+footer {
+  margin-top: auto;
+}
+
+article {
+  max-width: 80ch;
+
+  > img {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.bvc-container {
+  max-width: 120ch;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid $bvc-color-light-gray;
+}
