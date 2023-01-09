@@ -1,0 +1,90 @@
+// colors
+// brand colors
+$brand-colors: (
+  "primary": #0c2e8a,
+  "secondary": #50d8af,
+  "background": #f9f9f9
+) !default;
+// extra colors
+$colors: map-merge(
+  $brand-colors,
+  (
+    "text": #444,
+    "light": #555,
+    "lighter": #666,
+    "gray": #dddddd,
+    "white": #fff,
+  )
+);
+
+@function color($key) {
+  @return map-get($colors, $key);
+}
+
+// media-breakpoint-up mixin
+$breakpoits : (
+  "xs": 0,
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px,
+  "xxl": 1400px,
+);
+@mixin media-breakpoint-up($breakpoint) {
+  @media (min-width: map-get($breakpoits, $breakpoint)) {
+    @content;
+  }
+}
+
+$border-radius: 0.3rem !default;
+
+// fonts
+$font-family: "Open Sans", sans-serif;
+$strong-font-weight: 500 !default;
+
+$base-font-size: 13px !default;
+$base-font-size-md: 15px !default;
+$base-font-size-lg: 16px !default;
+
+$font-sizes: (
+  "h1": 3rem,
+  "h2": 2rem,
+  "h3": 1.75rem,
+  "h4": 1.4rem,
+  "lead": 1.3rem,
+  "medium": 1.1rem,
+  "normal": 1rem,
+) !default;
+
+
+@function fontSize($key) {
+  @return map-get($font-sizes, $key);
+}
+
+// line-heights
+$line-heights: (
+  "small": 1.4,
+  "normal": 1.6,
+  "large": 1.8,
+) !default;
+
+@function lineHeight($key) {
+  @return map-get($line-heights, $key);
+}
+
+// stacking
+$zIndexs: (
+  "navbar": 500,
+  "sidebar": 1000
+);
+@function zIndex($key) {
+  @return map-get($zIndexs, $key);
+}
+
+$spacing: (
+  sm: 1rem,
+  md: 3rem,
+  lg: 6rem,
+  xl: 10rem,
+  auto: "auto",
+) !default;

@@ -1,0 +1,42 @@
+.team-content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    .team-member {
+        display: flex;
+        width: max-content;
+        margin-bottom: 1rem;
+        flex-direction: column;
+        .pic {
+            background-color: transparent;
+        }
+        .details {
+            padding: 0.5rem;
+            text-align: center;
+            background-color: color("secondary");
+            span {
+                font-style: italic;
+            }
+            .social {
+                > a + a {
+                    margin-left: 0.5rem;
+                }
+            }
+            > * {
+                color: color("white") !important;
+            }
+        }
+    }
+    @include media-breakpoint-up(md) {
+        justify-content: space-between;
+        .team-member {
+            width: 49%;
+        }
+    }
+    @include media-breakpoint-up(lg) {
+        .team-member {
+            width: 24%;
+        }
+    }
+}

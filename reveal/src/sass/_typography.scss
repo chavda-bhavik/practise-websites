@@ -1,0 +1,73 @@
+// As of v0.3.0, `clamp` not well enough supported on mobile browsers for use
+// Due to build-in min/max Sass functions, requires `unquote()` to correctly
+// render as CSS min/max
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1,
+.h1 {
+  font-size: fontSize("h1");
+  font-size: unquote("min(max(3rem, 5vw), #{fontSize('h1')})");
+}
+
+h2,
+.h2 {
+  font-size: fontSize("h2");
+  font-size: unquote("min(max(2.5rem, 5vw), #{fontSize("h2")})");
+}
+
+h3,
+.h3 {
+  font-size: fontSize("h3");
+}
+
+h4,
+.h4 {
+  font-size: fontSize("h4");
+  color: color("gray");
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+article {
+  > ul,
+  > ol {
+    > li + li {
+      margin-top: 1rem;
+    }
+  }
+
+  * {
+    + h2 {
+      margin-top: 4rem;
+    }
+
+    + h3 {
+      margin-top: 2rem;
+    }
+  }
+}
+
+strong {
+  font-weight: $strong-font-weight;
+}
+
+blockquote {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 1.5rem;
+  border-left: 2px solid color("secondary");
+  color: color("gray");
+
+  &,
+  p {
+    font-size: fontSize("h4");
+  }
+
+  + * {
+    margin-top: 3rem;
+  }
+}

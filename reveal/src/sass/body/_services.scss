@@ -1,0 +1,46 @@
+.services {
+    & > p {
+        font-size: fontSize("medium");
+    }
+    &-content  {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: stretch;
+    }
+    &-item {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 2rem;
+        cursor: pointer;
+        transition: 0.4s;
+        margin-top: 2rem;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+        .icon {
+            padding: 0 1.5rem;
+            color: color(secondary);
+        }
+        p {
+            margin: 0;
+            font-size: fontSize("normal");
+        }
+        h2 {
+            line-height: lineHeight("small");
+            margin-bottom: 0.7rem;
+        }
+        &:hover {
+            transform: translateY(-1rem);
+            box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);  
+        }
+        @include media-breakpoint-up("lg") {
+            width: 45%;
+            margin-left: 2rem;
+            &:hover {
+                transform: translateY(-0.5rem);
+                box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+}

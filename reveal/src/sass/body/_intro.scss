@@ -1,0 +1,51 @@
+.intro {
+    position: relative;
+    background-image: url('/img/intro-carousel/2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
+    .content {
+        z-index: 10;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 75%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: color(primary);
+        h1 {
+            width: 100%;
+            span {
+                color: color(secondary);
+                text-decoration: underline;
+            }
+        }
+        .actions {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 2rem;
+            a + a {
+                margin-top: 0.5rem;
+            }
+            @include media-breakpoint-up("sm") {
+                flex-direction: row;
+                justify-content: center;
+                a + a {
+                    margin-top: 0;
+                    margin-left: 1rem;
+                }
+            }
+        }
+    }
+    .overlay {
+        z-index: 8;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #ffffff, $alpha: 0.6);
+    }
+}

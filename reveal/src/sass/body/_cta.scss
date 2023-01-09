@@ -1,0 +1,31 @@
+.cta {
+    background-color: color(primary);
+    color: color('white');
+    padding: 3rem 0;
+    .container {
+        text-align: center;
+        flex-direction: column;
+        .cta-content {
+            width: 100%;
+            h1 {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+        }
+        .cta-action {
+            width: 100%;
+        }
+        @include media-breakpoint-up(lg) {
+            flex-direction: row;
+            text-align: initial;
+            align-items: center;
+            .cta-content {
+                width: 75%;
+            }
+            .cta-action {
+                text-align: right;
+                width: 25%;
+            }
+        }
+    }
+}
